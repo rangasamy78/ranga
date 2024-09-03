@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <title>jQuery Checkbox state</title>
+  <style>
+  b {
+    color: red;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+<input id="checkbox1" type="checkbox" checked="checked">
+<label for="checkbox1">Check/ Uncheck this checkbox</label>
+<p></p>
+ 
+<script>
+$( "input" ).change(function() {
+  var $input = $( this );
+  $( "p" ).html(
+    ".attr( \"checked\" ): <b>" + $input.attr( "checked" ) + "</b><br>" +
+    ".prop( \"checked\" ): <b>" + $input.prop( "checked" ) + "</b><br>" +
+    ".is( \":checked\" ): <b>" + $input.is( ":checked" ) + "</b>" );
+}).change();
+</script>
+ 
+</body>
+</html>
